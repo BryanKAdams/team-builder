@@ -24,7 +24,7 @@ const PeopleForm = props => {
                 required
             />
             <label htmlFor="people">Email</label>
-            <input id="people" name="email" value={people.body} onChange={handleChanges} required />
+            <input type="email" id="people" name="email" value={people.body} onChange={handleChanges} required />
             <label htmlFor="role">Role</label>
             <select id="role" name="role" value={people.role} onChange={handleChanges} required>
                 <option value="">--Please choose an option--</option>
