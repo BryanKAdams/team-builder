@@ -11,9 +11,10 @@ const PeopleForm = props => {
     const submitForm = e => {
         e.preventDefault();
         props.addNewPeople(people);
+        setPeople({name: "", email: "", role: ""})
     };
     return (
-        <form onSubmit={submitForm}>
+        <form autoComplete="off" onSubmit={submitForm}>
             <label htmlFor="title">Name</label>
             <input
                 id="title"
@@ -24,7 +25,7 @@ const PeopleForm = props => {
                 required
             />
             <label htmlFor="people">Email</label>
-            <input type="email" id="people" name="email" value={people.body} onChange={handleChanges} required />
+            <input type="email" id="people" name="email" value={people.email} onChange={handleChanges} required />
             <label htmlFor="role">Role</label>
             <select id="role" name="role" value={people.role} onChange={handleChanges} required>
                 <option value="">--Please choose an option--</option>
